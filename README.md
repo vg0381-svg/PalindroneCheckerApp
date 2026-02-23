@@ -1,14 +1,14 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE1PALINDROME APP
+Main Class -USECASE2PALINDROME APP
 *======================================================================================================================================================================
-USECASE1-APPLICATION ENTRY AND WELCOME MESSAGE
+USECASE2-HARDCODE PALINDROME VALIDATION
 
 DESCRIPTION:
-*THIS class represents the entry point of the palindrome checker app management system
+*THIS class BASIC PALINDROME VALUATION USING A INPUTED STRING VALUE
 
 *At this point :
-->starts execution from main() method
--> displays Welcome message
-->Shows application message
-git 
+->STORES PREDEFINED STRING
+->COMPARES CHARACTERS FROM BOTH ENDS
+->DETERMINES THE STING IS PALINDROME OR NOT
+->Shows WHETHER THE INPUT STRING IS PALINDROME OR NOT
