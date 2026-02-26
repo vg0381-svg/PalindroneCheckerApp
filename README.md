@@ -1,15 +1,15 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE6PALINDROME APP
+Main Class -USECASE7PALINDROME APP
 *======================================================================================================================================================================
-USECASE6-Palindrome checker Using Both STACK and QUEUE
+USECASE7-Palindrome checker Using DEQUEUE
 
 DESCRIPTION:
-*This class checks whether a string is palindrome or not by using both STACK and QUEUE data structures
+*This class checks whether a string is palindrome or not by using DEQUEUE data structures
 
 *At this point :
 ->STORES PREDEFINED STRING
-->character are stored in stack and queue
-->characters are poped from front of queue and top of stack 
+->character are stored in dequeue
+->characters are compared by removing elements from both ends 
 ->Compares with both sequences to check match
 ->displays the result
