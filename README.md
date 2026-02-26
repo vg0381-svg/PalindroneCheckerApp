@@ -1,15 +1,15 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE3PALINDROME APP
+Main Class -USECASE4PALINDROME APP
 *======================================================================================================================================================================
-USECASE3-Reverse String Palindrome checker
+USECASE4-Palindrome checker Using Stack 
 
 DESCRIPTION:
-*This class checks whether a string is palindrome or not by REVERSING string and comparing with original value
+*This class checks whether a string is palindrome or not by Using a STACK system which follows LIFO principle
 
 *At this point :
 ->STORES PREDEFINED STRING
-->Iterates the string in reverse order
-->Builds a reversed order
-->Compares the reversed string and orginal
+->pushes charater into stack 
+->pops them in  reversed order
+->Compares with original sequence
 ->displays the result
