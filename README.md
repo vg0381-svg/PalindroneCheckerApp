@@ -1,14 +1,15 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE2PALINDROME APP
+Main Class -USECASE3PALINDROME APP
 *======================================================================================================================================================================
-USECASE2-HARDCODE PALINDROME VALIDATION
+USECASE3-Reverse String Palindrome checker
 
 DESCRIPTION:
-*THIS class BASIC PALINDROME VALUATION USING A INPUTED STRING VALUE
+*This class checks whether a string is palindrome or not by REVERSING string and comparing with original value
 
 *At this point :
 ->STORES PREDEFINED STRING
-->COMPARES CHARACTERS FROM BOTH ENDS
-->DETERMINES THE STING IS PALINDROME OR NOT
-->Shows WHETHER THE INPUT STRING IS PALINDROME OR NOT
+->Iterates the string in reverse order
+->Builds a reversed order
+->Compares the reversed string and orginal
+->displays the result
