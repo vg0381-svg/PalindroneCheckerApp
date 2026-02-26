@@ -1,15 +1,15 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE4PALINDROME APP
+Main Class -USECASE6PALINDROME APP
 *======================================================================================================================================================================
-USECASE4-Palindrome checker Using Character Array Validation 
+USECASE6-Palindrome checker Using Both STACK and QUEUE
 
 DESCRIPTION:
-*This class checks whether a string is palindrome or not by converting the string into character array and comparing array using two-pointer technique
+*This class checks whether a string is palindrome or not by using both STACK and QUEUE data structures
 
 *At this point :
 ->STORES PREDEFINED STRING
-->converts string to char array
-->uses start and end pointers 
-->Compares with original sequence from start and end
+->character are stored in stack and queue
+->characters are poped from front of queue and top of stack 
+->Compares with both sequences to check match
 ->displays the result
