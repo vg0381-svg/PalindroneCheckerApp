@@ -1,14 +1,14 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE11ALINDROME APP
+Main Class -USECASE12PALINDROMEAPP
 *======================================================================================================================================================================
-USECASE11-palindrome checker using OOP techniques  
+USECASE12-palindrome checker using Java Interface to Incorporate multiple methods 
 
 DESCRIPTION:
-This class checks whether a string is palindrome or not using ObjectOriented Programming Design
+This class checks whether a string is palindrome or not using Interface to include various methods to check if  string is palindrome or not
 
 At this Point:
 ->creates a Palindromechecker class
-->encapsulates palindrome logic in class and checksm it using check() method
-->calls the method from main class
+->creates a java interface 
+->create various classes to check palindrome which are called dynamically in Palindromechecker class
 ->Displays the result 
