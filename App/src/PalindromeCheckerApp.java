@@ -3,14 +3,12 @@ public class PalindromeCheckerApp {
     public static boolean isPalindrome(String str, int start, int end) {
 
         // Base Condition
-        if (start >= end) {
+        if (start >= end)
             return true;
-        }
 
         // If characters don't match
-        if (str.charAt(start) != str.charAt(end)) {
+        if (str.charAt(start) != str.charAt(end))
             return false;
-        }
 
         // Recursive Call
         return isPalindrome(str, start + 1, end - 1);
@@ -22,6 +20,10 @@ public class PalindromeCheckerApp {
 
         System.out.print("Enter a string: ");
         String str = sc.nextLine();
+
+        // Normalize string
+        str = str.toLowerCase();              // Ignore case
+        str = str.replaceAll("\\s+", "");     // Remove spaces
 
         if (isPalindrome(str, 0, str.length() - 1))
             System.out.println("Is Palindrome?:True");
