@@ -1,15 +1,15 @@
 # PalindroneCheckerApp
 *=====================================================================================================================================================================
-Main Class -USECASE7PALINDROME APP
+Main Class -USECASE8PALINDROME APP
 *======================================================================================================================================================================
-USECASE7-Palindrome checker Using DEQUEUE
+USECASE8-Palindrome checker Using Linked list
 
 DESCRIPTION:
-*This class checks whether a string is palindrome or not by using DEQUEUE data structures
+*This class checks whether a string is palindrome or not by using Linked List data structures
 
 *At this point :
 ->STORES PREDEFINED STRING
-->character are stored in dequeue
+->character are stored in singular nodes
 ->characters are compared by removing elements from both ends 
-->Compares with both sequences to check match
+->Compares with both sequences to check matchgit 
 ->displays the result
