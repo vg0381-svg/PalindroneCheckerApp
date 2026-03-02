@@ -1,26 +1,24 @@
 import java.util.*;
 
-// Strategy Interface
-interface PalindromeStrategy {
-    boolean checkPalindrome(String input);
-}
+public class PalindromeCheckerApp {
 
-// Stack Strategy Implementation
-class StackStrategy implements PalindromeStrategy {
+    //Recursive Approach
+    public static boolean recursivePalindrome(String str, int start, int end) {
+        if (start >= end)
+            return true;
 
-    @Override
-    public boolean checkPalindrome(String input) {
-
-        if (input == null)
+        if (str.charAt(start) != str.charAt(end))
             return false;
 
-        String str = input.toLowerCase().replaceAll("\\s+", "");
+        return recursivePalindrome(str, start + 1, end - 1);
+    }
 
+    // Stack Approach
+    public static boolean stackPalindrome(String str) {
         Stack<Character> stack = new Stack<>();
 
-        for (char c : str.toCharArray()) {
+        for (char c : str.toCharArray())
             stack.push(c);
-        }
 
         for (char c : str.toCharArray()) {
             if (c != stack.pop())
@@ -29,24 +27,13 @@ class StackStrategy implements PalindromeStrategy {
 
         return true;
     }
-}
 
-// Deque Strategy Implementation
-class DequeStrategy implements PalindromeStrategy {
-
-    @Override
-    public boolean checkPalindrome(String input) {
-
-        if (input == null)
-            return false;
-
-        String str = input.toLowerCase().replaceAll("\\s+", "");
-
+    // Deque Approach
+    public static boolean dequePalindrome(String str) {
         Deque<Character> deque = new ArrayDeque<>();
 
-        for (char c : str.toCharArray()) {
+        for (char c : str.toCharArray())
             deque.addLast(c);
-        }
 
         while (deque.size() > 1) {
             if (!deque.removeFirst().equals(deque.removeLast()))
@@ -55,55 +42,45 @@ class DequeStrategy implements PalindromeStrategy {
 
         return true;
     }
-}
-
-// Service Class (Context)
-class PalindromeService {
-
-    private PalindromeStrategy strategy;
-
-    public PalindromeService(PalindromeStrategy strategy) {
-        this.strategy = strategy;
-    }
-
-    public boolean check(String input) {
-        return strategy.checkPalindrome(input);
-    }
-}
-
-// Main Application
-public class PalindromeCheckerApp {
 
     public static void main(String[] args) {
 
         Scanner sc = new Scanner(System.in);
 
-        System.out.println("Choose Strategy:");
-        System.out.println("1. Stack Strategy");
-        System.out.println("2. Deque Strategy");
-        System.out.print("Enter choice: ");
-
-        int choice = sc.nextInt();
-        sc.nextLine(); // consume newline
-
-        PalindromeStrategy strategy;
-
-        if (choice == 1)
-            strategy = new StackStrategy();
-        else
-            strategy = new DequeStrategy();
-
-        PalindromeService service = new PalindromeService(strategy);
-
         System.out.print("Enter a string: ");
         String input = sc.nextLine();
 
-        boolean result = service.check(input);
+        // Normalize once
+        String str = input.toLowerCase().replaceAll("\\s+", "");
 
-        if (result)
-            System.out.println("Is Palindrome?:True");
-        else
-            System.out.println("Is Palindrome?:False");
+        // Recursive Timing
+        long startTime = System.nanoTime();
+        boolean recursiveResult = recursivePalindrome(str, 0, str.length() - 1);
+        long endTime = System.nanoTime();
+        long recursiveTime = endTime - startTime;
+
+        // Stack Timing
+        startTime = System.nanoTime();
+        boolean stackResult = stackPalindrome(str);
+        endTime = System.nanoTime();
+        long stackTime = endTime - startTime;
+
+        // Deque Timing
+        startTime = System.nanoTime();
+        boolean dequeResult = dequePalindrome(str);
+        endTime = System.nanoTime();
+        long dequeTime = endTime - startTime;
+
+        // Display Results
+        System.out.println("\n--- Results ---");
+        System.out.println("Recursive Result: " + recursiveResult +
+                " | Time: " + recursiveTime + " ns");
+
+        System.out.println("Stack Result:     " + stackResult +
+                " | Time: " + stackTime + " ns");
+
+        System.out.println("Deque Result:     " + dequeResult +
+                " | Time: " + dequeTime + " ns");
 
         sc.close();
     }
